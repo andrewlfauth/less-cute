@@ -1,4 +1,4 @@
-export const ALL_DOGS = [
+const ALL_DOGS = [
   'Dachshund_rabbit.jpg',
   'Daschund-2.jpg',
   'Daschund_Wirehair.jpg',
@@ -30,3 +30,4 @@ export const ALL_DOGS = [
   'puppy-1006024_640.jpg',
   'tina.jpg'
 ]
+export default ALL_DOGS
