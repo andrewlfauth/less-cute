@@ -39,7 +39,7 @@ export async function post({request}) {
   //   }
   // })
 
-  let status = await Votes.findOne({})
+  let status: any = await Votes.findOne({})
   status.totalVotes++
   status.candidates[winner]++
   let updated = await Votes.findOneAndUpdate({}, status)
