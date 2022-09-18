@@ -1,17 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import DogListing from '../components/DogListing';
+import {getVotingOptions} from '../data/getRandom'
+
+const options = getVotingOptions()
 ---
 
 <Layout title="Uglier">
 	<main class="flex flex-col items-center justify-center">
-    <h1 class="text-4xl font-bold">Which dog is uglier?</h1>
-    <DogListing dog="Daschund-2.jpg" />
-    <!-- <Counter client:visible a={options[0]} b={options[1]} /> -->
-
-    <form action="/api/image/Daschund-2.jpg" method="get">
-      <button type="submit">SUBMIT</button>
-      <p>HELLO</p>
-    </form>
+    <h1 class="text-4xl font-bold mb-20">Which one is less cute?</h1>
+    <DogListing client:visible a={options[0]} b={options[1]} />
 	</main>	
 </Layout>
