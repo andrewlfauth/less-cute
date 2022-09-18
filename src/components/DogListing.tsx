@@ -30,7 +30,6 @@ const DogListing: FunctionComponent<{a: string, b: string}> = ({a, b}) => {
     })
     setcurrent([next[0], next[1]])
     setNext(getVotingOptions())
-    
   }
 
   return (
@@ -39,7 +38,7 @@ const DogListing: FunctionComponent<{a: string, b: string}> = ({a, b}) => {
         <img class="h-44 rounded-lg" src={getImageForDog(current[0])} alt="dog1" />
         <button 
           onClick={handleA}
-          class="bg-slate-800 px-4 py-2 rounded text-xl"
+          class="bg-slate-800 hover:bg-slate-700 duration-200 px-4 py-2 rounded text-xl"
         >
           This one is
         </button>
@@ -49,9 +48,9 @@ const DogListing: FunctionComponent<{a: string, b: string}> = ({a, b}) => {
         <img class="h-44 rounded-lg" src={getImageForDog(current[1])} alt="dog1" />
         <button
           onClick={handleB}  
-          class="bg-slate-800 px-4 py-2 rounded text-xl"
+          class="bg-slate-800 px-4 py-2 hover:bg-slate-700 duration-200 rounded text-xl"
         >
-          No, this one
+          This one is
         </button>
       </div>
     </div>
