@@ -1,7 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro'
+import ResultsTable from '../components/ResultsTable'
+import Votes from '../models/Votes'
+
+const results = await Votes.findOne({})
+const {totalVotes, candidates} = results
+
 ---
 
 <Layout title="Results | Less Cute">
-  <div>Hello</div>
+  <ResultsTable totalVotes={totalVotes} results={candidates} />
 </Layout>
