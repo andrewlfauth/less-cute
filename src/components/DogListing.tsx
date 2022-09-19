@@ -50,7 +50,7 @@ const DogListing: FunctionComponent<{a: string, b: string}> = ({a, b}) => {
         </button>
       </div>
       <span class="md:mx-10 md:my-0 my-10 text-lg font-semibold">
-        {loading ? "submitting..." : "vs"}
+        vs
       </span>
       <div class="flex flex-col items-center justify-center space-y-4">
         <img class="h-44 rounded-lg" src={getImageForDog(current[1])} alt="dog1" />
