@@ -32,7 +32,7 @@ const ResultsTable: FunctionComponent<{
   return (
     <div class="flex justify-between flex-col lg:flex-row">
       <div>
-        <h2 class="text-4xl pb-6">Winning Now</h2>
+        <h2 class="text-4xl pb-6">Winning Now 🏆</h2>
         <img 
           src={getImageForDog(sorted[0][0])} 
           alt="least cute dog"
