@@ -18,6 +18,7 @@ Built this silly voting app to try out Astro.
 
 - [Astro](https://astro.build)
 - [Preact](https://preactjs.com)
+- [Typescript](https://www.typescriptlang.org)
 - [Tailwindcss](https://tailwindcss.com)
 - [MongoDB](https://mongodb.com)
 - [Mongoose](https://mongoosejs.com)
