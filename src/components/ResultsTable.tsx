@@ -40,7 +40,7 @@ const ResultsTable: FunctionComponent<{
         />
       </div>
       <div>
-        <span>Total Votes: {totalVotes}</span>
+        <span class="mb-2 block">Total Votes: {totalVotes}</span>
         <div class="grid lg:grid-cols-2 gap-4 mt-4 lg:mt-0 mx-10">
           {sorted.map((k, i) => (
             <div class="flex items-center pl-8 rounded-lg py-2 bg-slate-700 relative">
