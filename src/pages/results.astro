@@ -4,10 +4,11 @@ import ResultsTable from '../components/ResultsTable'
 import Votes from '../models/Votes'
 
 const results = await Votes.findOne({})
-const {totalVotes, candidates} = results
-
 ---
 
 <Layout title="Results | Less Cute">
-  <ResultsTable totalVotes={totalVotes} results={candidates} />
+  <ResultsTable 
+    totalVotes={results.totalVotes} 
+    candidates={results.candidates} 
+  />
 </Layout>
