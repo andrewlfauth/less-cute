@@ -1,9 +1,10 @@
 ---
 export interface Props {
 	title: string;
+  active: string;
 }
 
-const { title } = Astro.props;
+const { title, active } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -15,13 +16,25 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="bg-slate-900 py-2 text-gray-100 px-4 sm:px-6 lg:px-8">
-		<nav class="flex space-x-4">
-      <a href="/">
+	<body class="bg-slate-900 py-2 px-4 sm:px-6 lg:px-8">
+		<nav class="flex space-x-4 text-gray-100">
+      <a 
+        href="/" 
+        class={`${active === '/' ? "underline" : ""}`}
+      >
         Home
       </a>
-      <a href="/results">
+      <a 
+        href="/results" 
+        class={`${active === '/results' ? "underline" : ""}`}
+      >
         Results
+      </a>
+      <a 
+        href="/about"
+        class={`${active === '/about' ? "underline" : ""}`}
+      >
+        About
       </a>
     </nav>
     <div class="py-20 lg:py-32">

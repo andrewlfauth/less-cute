@@ -38,7 +38,7 @@ const DogListing: FunctionComponent<{a: string, b: string}> = ({a, b}) => {
   }
 
   return (
-    <div class="flex flex-col md:flex-row justify-between items-center">
+    <div class="flex flex-col md:flex-row text-gray-100 justify-between items-center">
       <div class="flex flex-col items-center justify-center space-y-4">
         <img class="h-44 rounded-lg" src={getImageForDog(current[0])} alt="dog1" />
         <button 

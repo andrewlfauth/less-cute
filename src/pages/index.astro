@@ -6,9 +6,9 @@ import {getVotingOptions} from '../data/getRandom'
 const options = getVotingOptions()
 ---
 
-<Layout title="Less Cute">
+<Layout title="Less Cute" active="/">
 	<main class="flex flex-col items-center justify-center">
-    <h1 class="text-4xl font-bold mb-20">Which one is less cute?</h1>
+    <h1 class="text-4xl font-bold mb-20 text-gray-100">Which one is less cute?</h1>
     <DogListing client:visible a={options[0]} b={options[1]} />
 	</main>	
 </Layout>

@@ -30,7 +30,7 @@ const ResultsTable: FunctionComponent<{
   const sorted = results.sort((a, b) => b[1] - a[1])
   
   return (
-    <div class="flex justify-between flex-col lg:flex-row">
+    <div class="flex text-gray-100 justify-between flex-col lg:flex-row">
       <div>
         <h2 class="text-4xl pb-6">Winning Now 🏆</h2>
         <img 

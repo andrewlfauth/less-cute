@@ -6,7 +6,7 @@ import Votes from '../models/Votes'
 const results = await Votes.findOne({})
 ---
 
-<Layout title="Results | Less Cute">
+<Layout title="Results | Less Cute" active="/results">
   <ResultsTable 
     totalVotes={results.totalVotes} 
     candidates={results.candidates} 
