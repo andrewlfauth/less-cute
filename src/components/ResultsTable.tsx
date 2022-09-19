@@ -36,21 +36,24 @@ const ResultsTable: FunctionComponent<{
         <img 
           src={getImageForDog(sorted[0][0])} 
           alt="least cute dog"
-          class="max-w-[500px] max-h-[500px] rounded-lg" 
+          class="md:max-w-[450px] md:max-h-[450px] rounded-lg" 
         />
       </div>
       <div>
-        <span class="mb-2 block">Total Votes: {totalVotes}</span>
-        <div class="grid lg:grid-cols-2 gap-4 mt-4 lg:mt-0 mx-10">
+        <span class="mb-2 block">
+          Total Votes:{" "}
+          <span class="text-lg font-semibold">{totalVotes}</span>
+        </span>
+        <div class="grid lg:ml-2 lg:grid-cols-2 gap-4 mt-4 lg:mt-0 ">
           {sorted.map((k, i) => (
-            <div class="flex items-center pl-8 rounded-lg py-2 bg-slate-700 relative">
+            <div class="flex justify-between pr-4 items-center pl-8 rounded-lg py-2 bg-slate-700 relative">
               <div class="rounded-tl-lg rounded-br-lg absolute top-0 left-0 bg-slate-800 px-2 font-semibold text-lg">
                 {i + 1}
               </div>
               <img 
                 src={getImageForDog(k[0])} 
                 alt="dog"
-                class="h-20 rounded-lg hover:scale-[3] duration-300 hover:z-10" 
+                class="h-20 lg:h-16 rounded-lg hover:scale-[3] duration-300 hover:z-10" 
               />
               <p class="text-2xl ml-2 font-semibold">{k[1]}%</p>
             </div>
