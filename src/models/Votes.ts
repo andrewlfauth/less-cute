@@ -1,6 +1,7 @@
 import { mongoose } from "../db"
 
 const VotesSchema = new mongoose.Schema({
+  totalVotes: Number,
   candidates: Object
 })
 
