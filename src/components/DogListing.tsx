@@ -12,11 +12,11 @@ const DogListing: FunctionComponent<{a: string, b: string}> = ({a, b}) => {
       winner: current[0],
       loser: current[1],
     }
-    await fetch('/api/vote', {
+    setcurrent([next[0], next[1]])
+    fetch('/api/vote', {
       method: "post",
       body: JSON.stringify(result)
     })
-    setcurrent([next[0], next[1]])
     setNext(getVotingOptions())
   }
   const handleB = async () => {
@@ -24,11 +24,11 @@ const DogListing: FunctionComponent<{a: string, b: string}> = ({a, b}) => {
       winner: current[1],
       loser: current[0],
     }
-    await fetch('/api/vote', {
+    setcurrent([next[0], next[1]])
+    fetch('/api/vote', {
       method: "post",
       body: JSON.stringify(result)
     })
-    setcurrent([next[0], next[1]])
     setNext(getVotingOptions())
   }
 
