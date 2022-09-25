@@ -16,7 +16,6 @@ const ALL_DOGS = [
   'dachshund-7.jpg',
   'dachshund-in-jacket.jpg',
   'dachshund_4.jpg',
-  'daschund-1.jpg',
   'daschund-shorthair.jpg',
   'dog-1018408_640.jpg',
   'dog-1083690_640.jpg',
@@ -28,6 +27,6 @@ const ALL_DOGS = [
   'harry-646905_640.jpg',
   'kaninchen-dachshund-953699_640.jpg',
   'puppy-1006024_640.jpg',
-  'tina.jpg'
+  'tina.jpg',
 ]
 export default ALL_DOGS
