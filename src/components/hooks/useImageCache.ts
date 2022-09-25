@@ -1,6 +1,8 @@
-import { useEffect } from 'preact/hooks'
+import { useEffect, useState } from 'preact/hooks'
 
 export default function useImageCache() {
+  const [loading, setLoading] = useState(true)
+
   useEffect(() => {
     const imgs = [
       'https://images.dog.ceo/breeds/dachshund/Dachshund_rabbit.jpg',
@@ -37,18 +39,21 @@ export default function useImageCache() {
 
     cacheImages(imgs)
   }, [])
-}
 
-async function cacheImages(srcArr: string[]) {
-  const promises = srcArr.map((src) => {
-    return new Promise<void>((res, rej) => {
-      const img = new Image()
+  async function cacheImages(srcArr: string[]) {
+    const promises = srcArr.map((src) => {
+      return new Promise<void>((res, rej) => {
+        const img = new Image()
 
-      img.src = src
-      img.onload = () => res()
-      img.onerror = () => rej()
+        img.src = src
+        img.onload = () => res()
+        img.onerror = () => rej()
+      })
     })
-  })
 
-  await Promise.all(promises)
+    await Promise.all(promises)
+    setLoading(false)
+  }
+
+  return { loading }
 }
