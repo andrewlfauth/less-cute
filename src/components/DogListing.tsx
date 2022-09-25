@@ -1,6 +1,7 @@
 import type { FunctionComponent } from 'preact'
 import { useState } from 'preact/hooks'
 import { getVotingOptions } from '../data/getRandom'
+import LoadingSpinner from './LoadingSpinner'
 import useImageCache from './hooks/useImageCache'
 
 const getImageForDog = (dog: string) =>
@@ -44,7 +45,7 @@ const DogListing: FunctionComponent<{ a: string; b: string }> = ({ a, b }) => {
   }
 
   return loading ? (
-    <p>loading</p>
+    <LoadingSpinner />
   ) : (
     <div class='flex flex-col md:flex-row text-gray-100 justify-between items-center'>
       <div class='flex flex-col items-center justify-center space-y-4'>
