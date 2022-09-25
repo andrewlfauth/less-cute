@@ -7,11 +7,11 @@ const getImageForDog = (dog: string) =>
   `https://images.dog.ceo/breeds/dachshund/${dog}`
 
 const DogListing: FunctionComponent<{ a: string; b: string }> = ({ a, b }) => {
-  const [loading, setLoading] = useState(false)
+  const { loading } = useImageCache()
   const [current, setcurrent] = useState([a, b])
   const [next, setNext] = useState(getVotingOptions())
+
   const handleA = async () => {
-    setLoading(true)
     let result = {
       winner: current[0],
       loser: current[1],
@@ -22,10 +22,9 @@ const DogListing: FunctionComponent<{ a: string; b: string }> = ({ a, b }) => {
       body: JSON.stringify(result),
     })
     setNext(getVotingOptions())
-    setLoading(false)
   }
+
   const handleB = async () => {
-    setLoading(true)
     let result = {
       winner: current[1],
       loser: current[0],
@@ -36,12 +35,11 @@ const DogListing: FunctionComponent<{ a: string; b: string }> = ({ a, b }) => {
       body: JSON.stringify(result),
     })
     setNext(getVotingOptions())
-    setLoading(false)
   }
 
-  useImageCache()
-
-  return (
+  return loading ? (
+    <p>loading</p>
+  ) : (
     <div class='flex flex-col md:flex-row text-gray-100 justify-between items-center'>
       <div class='flex flex-col items-center justify-center space-y-4'>
         <img
